@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "alwaysStrict": true,
+    "types": [
+      "node"
+    ],
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "target": "es2017"
+  }
+}

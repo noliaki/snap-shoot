@@ -14,10 +14,13 @@
     "build:production": "cross-env NODE_ENV=production run-s clean start:build:production",
     "clean": "node scripts/clean.js",
     "start:build:production": "npm run webpack && node ./scripts/production.js",
-    "start:build:dev": "npm run webpack & node ./scripts/dev.js",
-    "webpack": "webpack --config ./webpack.config.js"
+    "start:build:dev": "npm run webpack:client & npm run webpack:server & node ./scripts/dev.js & npm run nodemon",
+    "webpack:client": "webpack --config ./webpack.config.client.js",
+    "webpack:server": "webpack --config ./webpack.config.server.js",
+    "nodemon": "nodemon ./dist/server/index.js"
   },
   "dependencies": {
+    "@types/node": "^9.4.7",
     "autoprefixer-stylus": "^0.14.0",
     "babel-polyfill": "^6.26.0",
     "browser-sync": "^2.23.6",
@@ -31,6 +34,7 @@
     "imagemin-pngquant": "^5.0.1",
     "imagemin-svgo": "^6.0.0",
     "js-yaml": "^3.10.0",
+    "nodemon": "^1.17.1",
     "npm-run-all": "^4.0.2",
     "pug": "^2.0.0-rc.4",
     "rimraf": "^2.6.2",

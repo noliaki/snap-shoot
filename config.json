@@ -1,18 +1,18 @@
 {
-  "src": "src",
-  "dist": "dist",
-  "docroot": "src/docroot",
+  "src": "src/client",
+  "dist": "dist/client",
+  "docroot": "src/client/docroot",
   "browsers": [
     "> 1%",
     "last 2 versions"
   ],
   "pug": {
-    "basedir": "src/modules/pug",
+    "basedir": "src/client/modules/pug",
     "pretty": true
   },
   "stylus": {
     "compress": true,
-    "include": "src/modules/stylus"
+    "include": "src/client/modules/stylus"
   },
   "imagemin": {
     "jpegtran": {},
@@ -27,11 +27,11 @@
   },
   "browsersync": {
     "server": {
-      "baseDir": "dist",
+      "baseDir": "dist/client",
       "directory": true
     },
     "startPath": "/index.html",
-    "files": "dist",
+    "files": "dist/client",
     "ghostMode": false,
     "logLevel": "debug",
     "reloadDebounce": 500,
